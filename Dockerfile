@@ -89,6 +89,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
   CMD curl -f http://127.0.0.1:3000/health || exit 1
 
 # Optimized entrypoint
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-CMD ["npx","@modelcontextprotocol/server-http","--server","dist/mcp/index.js","--port","3000","--host","0.0.0.0"]
+ENTRYPOINT ["n8n-mcp"]
+CMD ["http"]
+
 
