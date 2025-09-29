@@ -90,5 +90,5 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # Optimized entrypoint
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-CMD ["n8n-mcp", "http"]
+CMD ["npx","@modelcontextprotocol/server-http","--server","dist/mcp/index.js","--port","3000","--host","0.0.0.0"]
 
